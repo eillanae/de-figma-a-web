@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milena Martín · Diseño gráfico y web</title>
+  <meta name="description" content="Portfolio de Milena Martín, estudiante de Gráfica Interactiva en Zaragoza.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Courier+Prime:wght@400;700&family=Instrument+Sans:wght@400;500&family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <div class="mesa">
+
+    <header class="cabecera">
+      <a href="#inicio" class="dymo">Milena Martín</a>
+      <nav class="menu">
+        <a href="#proyectos" class="pestana">proyectos</a>
+        <a href="#sobre-mi" class="pestana">sobre mí</a>
+        <a href="#contacto" class="pestana">contacto</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- portada -->
+      <section class="portada" id="inicio">
+        <div class="nota nota-portada">
+          <span class="cinta cinta-papel"></span>
+          <p class="rotulo">Gráfica interactiva · 2.º curso</p>
+          <h1>Diseño gráfico y web</h1>
+          <p class="maquina">
+            Estoy en segundo de Gráfica Interactiva, en Zaragoza. Aquí voy subiendo
+            lo que hago en clase y algún proyecto que me invento por mi cuenta.
+          </p>
+        </div>
+
+        <div class="portada-notas">
+          <a href="#proyectos" class="nota nota-rosa">ver mis trabajos ↓</a>
+          <a href="#contacto" class="nota nota-azul">escríbeme →</a>
+        </div>
+
+        <figure class="polaroid polaroid-yo">
+          <span class="cinta cinta-naranja"></span>
+          <div class="hueco"></div>
+          <figcaption>
+            <span class="pie">yo, en clase</span>
+            <span class="categoria">Zaragoza · 2026</span>
+          </figcaption>
+        </figure>
+
+        <div class="cafe" aria-hidden="true"></div>
+        <p class="cafe-nota" aria-hidden="true">con leche, gracias</p>
+        <div class="regla" aria-hidden="true"></div>
+      </section>
+
+      <!-- proyectos -->
+      <section class="proyectos" id="proyectos">
+        <p class="rotulo">Proyectos</p>
+        <h2 class="titulo-mano">Lo último que he hecho</h2>
+        <p class="pista">(puedes mover las fotos)</p>
+
+        <div class="filtros">
+          <button class="pestana filtro activo" data-filtro="todos">Todos</button>
+          <button class="pestana filtro" data-filtro="branding">Branding</button>
+          <button class="pestana filtro" data-filtro="web">Web</button>
+          <button class="pestana filtro" data-filtro="ilustracion">Ilustración</button>
+        </div>
+
+        <div class="tablero">
+
+          <article class="polaroid tarjeta destacada" data-categoria="web" style="--x: 0%; --y: 0px; --r: -3deg;">
+            <span class="cinta cinta-naranja"></span>
+            <div class="hueco"></div>
+            <h3><a href="proyecto.html">Festival Brote</a></h3>
+            <p class="categoria">Web · 2026</p>
+            <p>Web para un festival de arte joven que nos inventamos en clase. Fue mi primera maqueta con grid.</p>
+          </article>
+
+          <article class="polaroid tarjeta" data-categoria="branding" style="--x: 42%; --y: 20px; --r: 4deg;">
+            <span class="cinta cinta-azul"></span>
+            <div class="hueco"></div>
+            <h3>Café Raíz</h3>
+            <p class="categoria">Branding · 2025</p>
+            <p>La cafetería de debajo de casa necesitaba logo. Al final también hice las tazas y la carta.</p>
+          </article>
+
+          <article class="polaroid tarjeta" data-categoria="ilustracion" style="--x: 72%; --y: 0px; --r: -2.5deg;">
+            <span class="cinta cinta-papel"></span>
+            <div class="hueco"></div>
+            <h3>Herbario</h3>
+            <p class="categoria">Ilustración · 2025</p>
+            <p>Treinta y una plantas que recogí en el Moncayo, dibujadas a tinta.</p>
+          </article>
+
+          <article class="polaroid tarjeta" data-categoria="web" style="--x: 47%; --y: 470px; --r: -4deg;">
+            <span class="cinta cinta-naranja"></span>
+            <div class="hueco"></div>
+            <h3>Biblioteca abierta</h3>
+            <p class="categoria">Web · 2025</p>
+            <p>Prototipo en Figma para reservar libros en la biblioteca del instituto.</p>
+          </article>
+
+          <article class="polaroid tarjeta" data-categoria="branding" style="--x: 75%; --y: 440px; --r: 3deg;">
+            <span class="cinta cinta-azul"></span>
+            <div class="hueco"></div>
+            <h3>Taller Nudo</h3>
+            <p class="categoria">Branding · 2024</p>
+            <p>Logo, etiquetas y tarjetas para el taller textil de mi tía.</p>
+          </article>
+
+          <article class="polaroid tarjeta" data-categoria="ilustracion" style="--x: 7%; --y: 590px; --r: 2deg;">
+            <span class="cinta cinta-papel"></span>
+            <div class="hueco"></div>
+            <h3>Cartel Otoño</h3>
+            <p class="categoria">Ilustración · 2024</p>
+            <p>Cartel ganador de la semana cultural de la escuela.</p>
+          </article>
+
+          <p class="favorito" aria-hidden="true">¡mi favorito!</p>
+          <a href="proyecto.html" class="nota nota-amarilla ver-proyecto">ver proyecto →</a>
+        </div>
+      </section>
+
+      <!-- sobre mí -->
+      <section class="sobre-mi" id="sobre-mi">
+        <div class="hoja">
+          <p class="rotulo">Sobre mí</p>
+          <h2 class="titulo-mano">Hola, soy Milena</h2>
+          <p>
+            Empecé dibujando y, casi sin darme cuenta, acabé también programando. Me gusta
+            todo el proceso: bocetar a mano, montar el prototipo en Figma y pelearme con el
+            CSS hasta que sale como quiero.
+          </p>
+          <ul class="habilidades">
+            <li>Figma</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Illustrator</li>
+            <li>Tipografía</li>
+          </ul>
+        </div>
+
+        <figure class="polaroid polaroid-bocetos">
+          <span class="cinta cinta-azul"></span>
+          <div class="hueco"></div>
+          <figcaption>
+            <span class="pie">bocetos, siempre</span>
+            <span class="categoria">cuaderno nº 7</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- contacto -->
+      <section class="contacto" id="contacto">
+        <div class="postal">
+          <div class="postal-mensaje">
+            <p class="rotulo">Contacto</p>
+            <h2 class="titulo-mano">Escríbeme</h2>
+            <p>Si tienes un proyecto, una duda o te apetece colaborar, aquí me tienes. Suelo contestar en un par de días.</p>
+          </div>
+
+          <form class="formulario">
+            <div class="sello-correos" aria-hidden="true">ZGZ<br>2026</div>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="3" required></textarea>
+
+            <button type="submit" class="sello">Enviar</button>
+            <p class="aviso" role="status"></p>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+      <p>© <span id="anio"></span> Milena Martín · Ejemplo para clase</p>
+    </footer>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
