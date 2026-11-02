@@ -8,91 +8,88 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Courier+Prime:wght@400;700&family=Instrument+Sans:wght@400;500&family=Reenie+Beanie&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-  <div class="mesa">
+  <header class="cabecera" id="inicio">
+    <a href="index.html#proyectos" class="meta-fuerte">← Volver al índice</a>
+    <a href="index.html" class="meta-fuerte">Milena Martín</a>
+  </header>
 
-    <header class="cabecera">
-      <a href="index.html" class="dymo">Milena Martín</a>
-      <a href="index.html#proyectos" class="pestana">← volver a la mesa</a>
-    </header>
+  <main class="proyecto">
 
-    <main class="dossier">
+    <p class="meta-fuerte rojo">(01) Web · 2026</p>
+    <h1 class="titular">Festival Brote</h1>
 
-      <article class="hoja-dossier">
-        <span class="cinta cinta-naranja"></span>
-        <p class="rotulo">01 · web · 2026</p>
-        <h1>Festival Brote</h1>
-        <p class="intro">
-          Un festival de arte joven que nos inventamos en clase de Programación I.
-          El encargo era hacer la web entera: cartel, programa, información práctica
-          y una página para cada artista.
-        </p>
+    <dl class="reticula ficha">
+      <div><dt>Asignatura</dt><dd>Programación I</dd></div>
+      <div><dt>Año</dt><dd>2026</dd></div>
+      <div><dt>Herramientas</dt><dd>Figma, HTML, CSS</dd></div>
+      <div><dt>Duración</dt><dd>6 semanas</dd></div>
+    </dl>
 
-        <dl class="ficha">
-          <div><dt>Asignatura</dt><dd>Programación I</dd></div>
-          <div><dt>Año</dt><dd>2026</dd></div>
-          <div><dt>Herramientas</dt><dd>Figma, HTML, CSS</dd></div>
-          <div><dt>Duración</dt><dd>6 semanas</dd></div>
-        </dl>
+    <div class="reticula">
+      <p class="entradilla proyecto-intro">
+        Un festival de arte joven que nos inventamos en clase. El encargo era hacer
+        la web entera: cartel, programa, información práctica y una página para cada artista.
+      </p>
+    </div>
 
-        <h2>El reto</h2>
-        <p>
-          La primera versión era una lista larguísima de artistas y no se encontraba nada.
-          Había que conseguir que el programa se leyera de un vistazo, también en el móvil.
-        </p>
+    <figure class="imagen imagen-grande rojo-fondo">
+      <figcaption>la portada de la web</figcaption>
+    </figure>
 
-        <h2>El proceso</h2>
-        <p>
-          Empecé con bocetos en papel y un wireframe en Figma. Probé tres rejillas distintas
-          hasta que una aguantó fotos de todos los tamaños. Luego lo maqueté con CSS Grid,
-          que hasta entonces me daba bastante miedo.
-        </p>
+    <div class="reticula bloque">
+      <h2>El reto</h2>
+      <p>
+        La primera versión era una lista larguísima de artistas y no se encontraba nada.
+        Había que conseguir que el programa se leyera de un vistazo, también en el móvil.
+      </p>
 
-        <h2>Lo que aprendí</h2>
-        <p>
-          Que el móvil hay que pensarlo desde el principio y no al final. Y que poner nombre
-          a las clases antes de empezar ahorra muchas horas.
-        </p>
-      </article>
+      <h2>El proceso</h2>
+      <p>
+        Empecé con bocetos en papel y un wireframe en Figma. Probé tres rejillas distintas
+        hasta que una aguantó fotos de todos los tamaños. Luego lo maqueté con CSS Grid,
+        que hasta entonces me daba bastante miedo.
+      </p>
+    </div>
 
-      <!-- fotos -->
-      <div class="fotos">
-        <figure class="polaroid foto-grande" style="--r: 3deg;">
-          <span class="cinta cinta-azul"></span>
-          <div class="hueco"></div>
-          <figcaption><span class="pie">la portada de la web</span></figcaption>
-        </figure>
-        <figure class="polaroid" style="--r: -5deg;">
-          <span class="cinta cinta-papel"></span>
-          <div class="hueco"></div>
-          <figcaption><span class="pie">bocetos en papel</span></figcaption>
-        </figure>
-        <figure class="polaroid desplazada" style="--r: 4deg;">
-          <span class="cinta cinta-naranja"></span>
-          <div class="hueco"></div>
-          <figcaption><span class="pie">wireframe en Figma</span></figcaption>
-        </figure>
-        <figure class="polaroid foto-vertical" style="--r: -2.5deg;">
-          <span class="cinta cinta-azul"></span>
-          <div class="hueco"></div>
-          <figcaption><span class="pie">versión móvil</span></figcaption>
-        </figure>
-        <p class="nota-mesa" aria-hidden="true">tres rejillas después…</p>
-      </div>
+    <div class="reticula imagenes">
+      <figure class="imagen hueco-fondo">
+        <figcaption>bocetos en papel</figcaption>
+      </figure>
+      <figure class="imagen tinta-fondo">
+        <figcaption>wireframe en Figma</figcaption>
+      </figure>
+    </div>
 
-      <a href="index.html#proyectos" class="nota nota-rosa siguiente">siguiente: Café Raíz →</a>
+    <div class="reticula bloque">
+      <h2>Lo que aprendí</h2>
+      <p>
+        Que el móvil hay que pensarlo desde el principio y no al final. Y que poner nombre
+        a las clases antes de empezar ahorra muchas horas.
+      </p>
+    </div>
 
-    </main>
+    <a href="index.html#proyectos" class="siguiente">
+      <span class="meta-fuerte rojo">Siguiente</span>
+      <span class="titular">Café Raíz →</span>
+    </a>
 
-    <footer class="pie-pagina">
-      <p>© <span id="anio"></span> Milena Martín · Ejemplo para clase</p>
-    </footer>
+  </main>
 
+  <footer class="pie">
+    <p>© <span id="anio"></span> Milena Martín · Ejemplo para clase</p>
+    <button class="ver-reticula" type="button">ver retícula</button>
+    <a href="#inicio" class="meta-fuerte">volver arriba ↑</a>
+  </footer>
+
+  <div class="columnas" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
 
   <script src="js/script.js"></script>

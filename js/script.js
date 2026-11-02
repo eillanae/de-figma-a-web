@@ -1,50 +1,6 @@
-// arrastrar las fotos (solo en pantalla grande)
-const tablero = document.querySelector('.tablero');
-const pantallaGrande = window.matchMedia('(min-width: 901px)');
-let encima = 10;
-
-if (tablero) {
-  tablero.querySelectorAll('.polaroid').forEach((foto) => {
-    let inicioX, inicioY, izquierda, arriba, movida;
-    let arrastrando = false;
-
-    foto.addEventListener('pointerdown', (e) => {
-      if (!pantallaGrande.matches) return;
-      inicioX = e.clientX;
-      inicioY = e.clientY;
-      izquierda = foto.offsetLeft;
-      arriba = foto.offsetTop;
-      movida = false;
-      arrastrando = true;
-      foto.setPointerCapture(e.pointerId);
-      foto.classList.add('levantada');
-      foto.style.zIndex = ++encima;
-    });
-
-    foto.addEventListener('pointermove', (e) => {
-      if (!arrastrando) return;
-      const dx = e.clientX - inicioX;
-      const dy = e.clientY - inicioY;
-      if (Math.abs(dx) + Math.abs(dy) > 4) movida = true;
-      foto.style.left = izquierda + dx + 'px';
-      foto.style.top = arriba + dy + 'px';
-    });
-
-    foto.addEventListener('pointerup', () => {
-      arrastrando = false;
-      foto.classList.remove('levantada');
-    });
-
-    foto.addEventListener('click', (e) => {
-      if (movida) e.preventDefault();
-    });
-  });
-}
-
-
 // filtros
 const filtros = document.querySelectorAll('.filtro');
-const tarjetas = document.querySelectorAll('.tarjeta');
+const filas = document.querySelectorAll('.fila');
 
 filtros.forEach((boton) => {
   boton.addEventListener('click', () => {
@@ -53,12 +9,35 @@ filtros.forEach((boton) => {
 
     const filtro = boton.dataset.filtro;
 
-    tarjetas.forEach((tarjeta) => {
-      const coincide = filtro === 'todos' || tarjeta.dataset.categoria === filtro;
-      tarjeta.classList.toggle('oculta', !coincide);
+    filas.forEach((fila) => {
+      const coincide = filtro === 'todos' || fila.dataset.categoria === filtro;
+      fila.classList.toggle('oculta', !coincide);
     });
   });
 });
+
+
+// imagen que sigue al ratón en el índice
+const vista = document.querySelector('.vista-previa');
+const conRaton = window.matchMedia('(hover: hover) and (min-width: 701px)');
+
+if (vista) {
+  filas.forEach((fila) => {
+    fila.addEventListener('mouseenter', () => {
+      if (!conRaton.matches) return;
+      vista.className = 'vista-previa visible ' + fila.dataset.color;
+      vista.querySelector('span').textContent = fila.dataset.pie;
+    });
+
+    fila.addEventListener('mouseleave', () => {
+      vista.classList.remove('visible');
+    });
+
+    fila.addEventListener('mousemove', (e) => {
+      vista.style.transform = `translate(${e.clientX + 24}px, ${e.clientY - 100}px)`;
+    });
+  });
+}
 
 
 // formulario (no envía nada)
@@ -69,10 +48,16 @@ if (formulario) {
   formulario.addEventListener('submit', (e) => {
     e.preventDefault();
     const nombre = document.querySelector('#nombre').value;
-    aviso.textContent = `¡Recibido, ${nombre}! Te contesto pronto ✉`;
+    aviso.textContent = `¡Recibido, ${nombre}! Te contesto pronto.`;
     formulario.reset();
   });
 }
+
+
+// ver la retícula
+document.querySelector('.ver-reticula').addEventListener('click', () => {
+  document.body.classList.toggle('con-reticula');
+});
 
 
 // año
